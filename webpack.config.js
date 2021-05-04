@@ -38,10 +38,7 @@ const commonConfig = {
       test: /\.ejs$/,
       loader: 'ejs-compiled-loader',
       options: {
-        htmlmin: true,
-        htmlminOptions: {
-          removeComments: true
-        }
+        beautify: false
       }
     }, {
       test: /\.js$/,
@@ -63,7 +60,16 @@ const commonConfig = {
     new HtmlWebpackPlugin({
       template: './src/ejs/pages/index.ejs',
       filename: 'index.html',
-      hash: isProd
+      hash: isProd,
+      minify: {
+        collapseWhitespace: true,
+        keepClosingSlash: true,
+        removeComments: true,
+        removeRedundantAttributes: false,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true
+      }
     })
   ]
 }
@@ -147,7 +153,7 @@ if (isProd) {
         filename: '[name].[contenthash:8].css'
       }),
       new FaviconsWebpackPlugin({
-        logo: path.resolve(__dirname, 'src/assets/img/favicon.png'),
+        logo: path.resolve(__dirname, 'docs/assets/img/favicon.png'),
         prefix: '/favicons/',
         cache: false,
         inject: true,
