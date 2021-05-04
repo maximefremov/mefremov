@@ -72,5 +72,4 @@ fabric.properties
 
 .DS_Store
 node_modules
-docs
 package-lock.json

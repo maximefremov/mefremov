@@ -9,7 +9,6 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const StyleLintPlugin = require('stylelint-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 // Build env
@@ -146,9 +145,6 @@ if (isProd) {
       }),
       new MiniCssExtractPlugin({
         filename: '[name].[contenthash:8].css'
-      }),
-      new CopyWebpackPlugin({
-        patterns: [ { from: './src/assets', to: './assets' } ]
       }),
       new FaviconsWebpackPlugin({
         logo: path.resolve(__dirname, 'src/assets/img/favicon.png'),
