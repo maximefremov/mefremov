@@ -44,9 +44,10 @@
     "yargs": "^17.0.1"
   },
   "dependencies": {
-    "@fancyapps/fancybox": "^3.3.5",
-    "bootstrap": "^4.1.3",
-    "jquery": "^3.3.1",
+    "@fancyapps/fancybox": "^3.5.7",
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.6.0",
+    "noty": "^3.2.0-beta-deprecated",
     "vh-check": "^2.0.5",
     "waypoints": "^4.0.1"
   }

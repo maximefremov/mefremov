@@ -19,7 +19,9 @@ const isProd = !isDev
 const publicPath = path.resolve(__dirname, 'docs')
 
 const reloadPaths = [
-  path.resolve(__dirname, 'src/ejs/'),
+  path.resolve(__dirname, 'src/ejs'),
+  path.resolve(__dirname, 'src/ejs/blocks'),
+  path.resolve(__dirname, 'src/ejs/partials'),
   publicPath
 ]
 
@@ -38,7 +40,10 @@ const commonConfig = {
       test: /\.ejs$/,
       loader: 'ejs-compiled-loader',
       options: {
-        beautify: false
+        htmlmin: true,
+        htmlminOptions: {
+          removeComments: true
+        }
       }
     }, {
       test: /\.js$/,
@@ -58,10 +63,10 @@ const commonConfig = {
     }),
     new StyleLintPlugin(),
     new HtmlWebpackPlugin({
-      template: './src/ejs/pages/index.ejs',
+      template: './src/ejs/index.ejs',
       filename: 'index.html',
       hash: isProd,
-      minify: {
+      minify: (isProd) ? {
         collapseWhitespace: true,
         keepClosingSlash: true,
         removeComments: true,
@@ -69,7 +74,7 @@ const commonConfig = {
         removeScriptTypeAttributes: true,
         removeStyleLinkTypeAttributes: true,
         useShortDoctype: true
-      }
+      } : false
     })
   ]
 }
@@ -104,7 +109,6 @@ if (isDev) {
       historyApiFallback: true,
       open: true,
       hot: true,
-      host: 'localhost',
       port: 3000
     },
     devtool: 'inline-source-map',

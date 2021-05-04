@@ -12,3 +12,7 @@ import '@fancyapps/fancybox'
 // JS
 import App from './app.js'
 new App()
+
+//if (module.hot) {
+//  module.hot.accept();
+//}

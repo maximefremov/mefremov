@@ -1,5 +1,6 @@
 export const header = {
   homeLink: 'https://mefremov.ru/',
+  email: 'me@mefremov.ru',
   lang: 'ru',
   title: 'Сайт-портфолио | Максим Ефремов',
   description: 'Максим Ефремов - Front-end, WordPress разработчик и Web-дизайнер',

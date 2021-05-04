@@ -77,7 +77,7 @@
   }
 }
 
-@media (min-width: #{$screen_sm-max + 1}) {
+@media (min-width: #{$screen_xs-max}) {
 
   .skills:not(.filled) .skills__item_bar {
     width: 0 !important;

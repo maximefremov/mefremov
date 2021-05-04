@@ -1,13 +1,10 @@
-@import "../variables/containers";
 @import "../variables/colors";
 @import "../variables/fonts";
 
-$grid-breakpoints: (
-    xs: 0,
-    sm: $screen_xs-max + 1,
-    md: $screen_sm-max + 1,
-    lg: $screen_md-max + 1,
-    xl: $screen_lg-max + 1
+$container-max-widths: (
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
 );
 
 $font-family-base: $font_name-base;
