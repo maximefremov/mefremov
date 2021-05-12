@@ -1,3 +1,5 @@
+<% const about = require('./../../config/about') %>
+
 <section id="<%= about.id %>" class="block block-white">
     <div class="container">
         <div class="header row">
@@ -15,7 +17,7 @@
                 </div>
             </div>
             <article class="about__article animated col-xl-8 col-md-9" data-animation="slide-in-right">
-                <%- about.article %>
+                <%= about.article %>
             </article>
         </div>
     </div>

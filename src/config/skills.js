@@ -1,4 +1,4 @@
-export const skills = {
+module.exports = {
   id: 'skills',
   header: 'Навыки',
   desc: 'Основные технологии и инструменты, которыми я владею и использую:',

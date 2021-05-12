@@ -1,4 +1,4 @@
-export const metrics = {
+module.exports = {
   header: `<meta name="yandex-verification" content="338c7ba668721fce" />
            <meta name="google-site-verification" content="Hc95Ij4PnGl55zWeiH5gbPen_T54ViK54Fj231yKw9M" />`,
   footer: `
@@ -18,4 +18,4 @@ export const metrics = {
     <noscript><div><img src="https://mc.yandex.ru/watch/49700518" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
   `
-};
+}

@@ -1,5 +1,6 @@
-export const footer = {
+module.exports = {
   id: 'contact',
+  homeLink: 'https://mefremov.ru/',
   header: 'Связь со мной',
   desc: 'Напишите мне, если вас заинтересовали мои работы или если у вас есть другие вопросы.',
   form: {

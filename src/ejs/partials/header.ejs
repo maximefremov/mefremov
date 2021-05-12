@@ -1,3 +1,5 @@
+<% const header = require('./../../config/header') %>
+
 <!DOCTYPE html>
 <html lang="<%= header.lang %>">
 <head>
@@ -6,12 +8,12 @@
     <meta name="description" content="<%= header.description %>">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="manifest" href="/favicons/manifest.json">
-    <%- metrics.header %>
+    <%= metrics.header %>
 </head>
 <body class="compensate-for-scrollbar">
 
-<%- include ../blocks/preloader %>
-    
+<%= require('./../blocks/preloader.ejs')() %>
+
 <header class="d-flex flex-column justify-content-between">
     <section class="header-top">
         <div class="container">
@@ -34,7 +36,7 @@
                     <a class="header__lang_toggle active" href="/">Rus</a>
                 </div>
                 -->
-                
+
                 <button class="header__menu_toggle d-block d-md-none">
                     <span class="header__menu_toggle_line"></span>
                     <span class="header__menu_toggle_line"></span>
@@ -62,7 +64,7 @@
                 <div class="header__scroll col">
                     <a class="header__scroll_link d-inline-flex flex-column align-items-center" href="<%= header.scrollMore.link %>">
                         <p class="header__scroll_more"><%= header.scrollMore.text %></p>
-                        <span class="header__scroll_arrow"><%- icons.arrow %></span>
+                        <span class="header__scroll_arrow"><%= icons.arrow %></span>
                     </a>
                 </div>
             </div>

@@ -1,12 +1,11 @@
-<% const icons = require('../config/icons.js').icons; %>
-<% const metrics = require('../config/metrics.js').metrics; %>
+<% const icons = require('./../config/icons') %>
+<% const metrics = require('./../config/metrics') %>
+<% const globals = { icons, metrics } %>
 
-<% const header = require('../config/header.js').header; %>
-<% const about = require('../config/about.js').about; %>
-<% const portfolio = require('../config/portfolio.js').portfolio; %>
-<% const skills = require('../config/skills.js').skills; %>
-<% const footer = require('../config/footer.js').footer; %>
-
-<%- include partials/header %>
-<%- include partials/main %>
-<%- include partials/footer %>
+<%= require('./partials/header.ejs')(globals) %>
+<main>
+    <%= require('./blocks/about.ejs')() %>
+    <%= require('./blocks/portfolio.ejs')() %>
+    <%= require('./blocks/skills.ejs')() %>
+</main>
+<%= require('./partials/footer.ejs')(globals) %>

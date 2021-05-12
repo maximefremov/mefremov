@@ -1,4 +1,4 @@
-export const about = {
+module.exports = {
   id: 'about',
   header: 'Коротко о себе',
   article: `<p>Позиционирую себя преимущественно как Front-End и Wordpress разработчик, но на этом стараюсь 
@@ -14,4 +14,4 @@ export const about = {
     
     <p>Нахожусь в г. Брянск, Россия и если вас заинтересовали мои работы, можете написать мне на 
     <a href="mailto:me@mefremov.ru">me@mefremov.ru</a>.</p>`
-};
+}

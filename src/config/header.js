@@ -1,4 +1,4 @@
-export const header = {
+module.exports = {
   homeLink: 'https://mefremov.ru/',
   email: 'me@mefremov.ru',
   lang: 'ru',
@@ -18,4 +18,4 @@ export const header = {
     text: 'Узнать больше',
     link: '#about'
   }
-};
+}

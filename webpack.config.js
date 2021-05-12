@@ -11,6 +11,11 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
+// Configs
+const globals = {
+  header: require('./src/config/header')
+}
+
 // Build env
 const isDev = argv.mode === 'development'
 const isProd = !isDev
@@ -20,8 +25,6 @@ const publicPath = path.resolve(__dirname, 'docs')
 
 const reloadPaths = [
   path.resolve(__dirname, 'src/ejs'),
-  path.resolve(__dirname, 'src/ejs/blocks'),
-  path.resolve(__dirname, 'src/ejs/partials'),
   publicPath
 ]
 
@@ -38,12 +41,9 @@ const commonConfig = {
   module: {
     rules: [{
       test: /\.ejs$/,
-      loader: 'ejs-compiled-loader',
+      loader: 'ejs-loader',
       options: {
-        htmlmin: true,
-        htmlminOptions: {
-          removeComments: true
-        }
+        esModule: false
       }
     }, {
       test: /\.js$/,

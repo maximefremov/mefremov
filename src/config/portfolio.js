@@ -1,4 +1,4 @@
-export const portfolio = {
+module.exports = {
   id: 'portfolio',
   header: 'Портфолио',
   desc: 'Коллекция моих работ. Некоторые работы для клиентов, а некоторые личные.',
